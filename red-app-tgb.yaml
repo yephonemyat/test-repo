@@ -1,10 +1,10 @@
 apiVersion: elbv2.k8s.aws/v1beta1
 kind: TargetGroupBinding
 metadata:
-  name: argo-cd-tgb
-  namespace: argocd
+  name: red-tgb
+  namespace: red-ns
 spec:
   serviceRef:
-    name: argocd-server
+    name: red-service
     port: 80
   targetGroupARN: arn:aws:elasticloadbalancing:us-west-2:504968285206:targetgroup/lab-target-group/05e71d54b2ba004a
